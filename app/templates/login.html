@@ -3,7 +3,8 @@
 {% block content %}
     <h1>Sign In</h1>
     <form action="" method="POST" novalidate>
-        {{form.hidden_tag()}}
+        <!-- {{form.hidden_tag()}} -->
+        {{ form.csrf_token}}
         <p>
             {{form.username.label}}<br>
             {{form.username(size=32)}}
@@ -27,6 +28,9 @@
         </p>
         <p>
             {{form.submit()}}
+        </p>
+        <p>
+            New User? <a href="{{url_for('register')}}">Click here to Register</a>
         </p>
     </form>
 
