@@ -15,11 +15,10 @@
           <a href="{{ url_for('login') }}">Login</a>
           {% else %}
           <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-          <a href="{{ url_for('write_post')}}">Write A Post</a>
-
+          <a href="{{ url_for('explore') }}">Explore</a>
           <a href="{{ url_for('logout') }}">Logout</a>
           {% endif %}
-          <a href="{{ url_for('display') }}">Display</a>
+          <a href="{{ url_for('display') }}">Display Passwords</a>
 
         </div>
         <hr>
